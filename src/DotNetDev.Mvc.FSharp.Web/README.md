@@ -4,6 +4,7 @@
 Unfortunately F# does not come as part of the express editions of Visual Studio.  However you can still create and compile F# projects without cost:
 
 Either:
+
 * [Get the trial of Visual Studio](https://www.microsoft.com/visualstudio/en-us/try)
 
 Or
