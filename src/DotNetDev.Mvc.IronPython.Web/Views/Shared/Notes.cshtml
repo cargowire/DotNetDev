@@ -1,0 +1,39 @@
+﻿<h2>Notes</h2>
+
+	<p>ASP.NET MVC IronPython:</p>
+	<p>Probably more likely to be used as a part of a larger app, particularly to provide scripting abilities, this example
+	project shows how controllers and view models can be written using Python and run through the Dynamic Language Runtime.</p>
+
+	<dl>
+		<dt>Routes</dt>
+		<dd>In this case, for ease of creation the main project is a C# web project.  However the swap to IronPython
+		occurs when an IronPythonControllerFactory is set in <a class="popup" href="@Url.Content("~/Global.asax.cs.view?lines=40,41")">Global.asax.cs</a>.
+		This delegates the identification and creation of controller instances to my simple IronPythonControllerFactory.  The
+		highlighted lines on <a class="popup" href="@Url.Content("~/Controllers/IronPythonControllerFactory.cs.view?lines=22,23,24,28,34,35")">IronPythonControllerFactory.cs</a>
+		show where a PythonEngine is created and an external .py script is executed to instantiate a controller.
+		</dd>
+	
+		<dt><strong>C</strong>ontrollers</dt>
+		<dd>Instantiated by a controller factory based upon the defined routes.  In the case of IronPython due to its dynamic
+		nature and the inner workings of the ASP.NET MVC framework using reflection to call actions I created a
+		<a class="popup" href="@Url.Content("~/Controllers/PythonControllers.py.view?lines=13,14,15,16,17,18,19")">custom action invoker</a> that can be used by the Python
+		controllers to dynamically call the action methods.</dd>
+
+		<dt>Actions</dt>
+		<dd>In this example the <a class="popup" href="@Url.Content("~/Controllers/PythonControllers.py.view?lines=26,27")">MessageController</a> index
+			action is called by default.
+		</dd>
+	
+		<dt><strong>M</strong>odels</dt>
+		<dd>Within the message controller a <a class="popup" href="@Url.Content("~/Controllers/PythonControllers.py.view?lines=7,8,9")">Message</a> view model is created.  This is not a model in the
+			database sense.  In fact these do not exist in this particular project.  A View Model encapsulates the set of data required
+			by a particular view, some of which may come from persistant storage models.
+		</dd>
+	
+		<dt><strong>V</strong>iews</dt>
+		<dd>
+			In this example we are using the Razor view engine (provided by Microsoft).  We could just as easily be using Spark, webforms
+			or many others.  With razor code is denoted by @@ symbols.  With <a class="popup" href="@Url.Content("~/Views/Message/Index.cshtml.view?lines=10")">Index.cshtml</a>
+
+		</dd>
+	</dl>

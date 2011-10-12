@@ -1,0 +1,12 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@Model.text  @* Use @ symbol to denote code.  An @ prefixed variable will be immediately written out *@
+
+@Html.Partial("Notes") @* Render a separate 'child' view or 'partial' *@

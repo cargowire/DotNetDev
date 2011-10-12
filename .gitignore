@@ -1,0 +1,37 @@
+*.suo
+*.cachefile
+*.user
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.pdb
+*.dll.config
+# Directories #
+###############
+bin/
+obj/
+# Packages #
+############
+# Don't store zips
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+# Logs and databases #
+*.log
+*.sqlite
+*.cache
+# OS Generated files #
+.DS_Store
+ehthumbs.db
+Thumbs.db
+*.csproj.user
+# Local temp/settings #
+*.tsp.$$$

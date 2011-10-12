@@ -1,0 +1,11 @@
+﻿@model Message
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Dot Net Dev</h2>
+
+@Model.Text @* Use @ symbol to denote code.  An @ prefixed variable will be immediately written out *@
+
+@Html.Partial("Notes") @* Render a separate 'child' view or 'partial' *@

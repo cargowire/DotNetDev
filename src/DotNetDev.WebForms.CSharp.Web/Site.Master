@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DotNetDev.WebForms.CSharp.Web.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <link href="~/Styles/default.css" rel="stylesheet" type="text/css" runat="server" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('.popup').click(function (e) {
+				$('#content').attr('src', $(this).attr('href'));
+				$('#container, #close').show();
+				e.preventDefault();
+			});
+			$('#close').click(function (e) {
+				$('#content').attr('src', '');
+				$('#container, #close').hide();
+				e.preventDefault();
+			});
+		});
+	</script>
+	<asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+	<form runat="server">
+		<asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+
+		<a href="#" id="close">close</a>
+		<div id="container"><iframe id="content"></iframe></div>
+	</form>
+</body>
+</html>
