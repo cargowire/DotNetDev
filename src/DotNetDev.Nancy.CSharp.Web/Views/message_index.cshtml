@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link href="/src/DotNetDev.Nancy.CSharp.Web/content/default.css" rel="stylesheet" type="text/css" />
+    <link href="/content/default.css" rel="stylesheet" type="text/css" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function () {
@@ -28,18 +28,18 @@
 	<h2>Notes</h2>
 	
 	<p>Nancy is an example of a .NET web framework that has not come out of Microsoft.  In the case of this solution I have installed
-	Nancy via NuGet (the Microsoft package manager for .NET).  The <a class="popup" href="/src/DotNetDev.Nancy.CSharp.Web/packages.config.view?lines=3,4,5">packages.config</a> file shows the references to the installed packages.</p>
+	Nancy via NuGet (the Microsoft package manager for .NET).  The <a class="popup" href="/packages.config.view?lines=3,4,5">packages.config</a> file shows the references to the installed packages.</p>
 
 	<p>Nancy projects are made up of:</p>
 	<dl>
 		<dt>Modules</dt>
 		<dd>
 			Modules both define routes to be matched and actions to be executed - all in one.  In our case we have one module, the
-			<a class="popup" href="/DotNetDev.Nancy.CSharp.Web/MessageModule.cs.view">MessageModule.cs</a>.
+			<a class="popup" href="/MessageModule.cs.view">MessageModule.cs</a>.
 		</dd>
 	
 		<dt><strong>M</strong>odels</dt>
-		<dd>Within the message module a <a class="popup" href="/DotNetDev.Nancy.CSharp.Web/ViewModels/Message.cs.view">Message.cs</a> view model is created.  This is not a model in the
+		<dd>Within the message module a <a class="popup" href="/ViewModels/Message.cs.view">Message.cs</a> view model is created.  This is not a model in the
 			database sense.  In fact these do not exist in this particular project.  A View Model encapsulates the set of data required
 			by a particular view, some of which may come from persistant storage models.
 		</dd>
@@ -47,7 +47,7 @@
 		<dt><strong>V</strong>iews</dt>
 		<dd>
 			In this example we are using the Razor view engine.  We could just as easily be using Spark, webforms
-			or many others.  With razor code is denoted by @@ symbols.  With <a class="popup" href="/DotNetDev.Nancy.CSharp.Web/Views/message_index.cshtml.view?lines=26">message_index.cshtml</a>
+			or many others.  With razor code is denoted by @@ symbols.  With <a class="popup" href="/Views/message_index.cshtml.view?lines=26">message_index.cshtml</a>
 		</dd>
 	</dl>
 
