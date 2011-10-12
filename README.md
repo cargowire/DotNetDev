@@ -5,16 +5,16 @@ A demo project for experienced developers trying .NET for the very first time.  
 The solution contains 6 projects arranged inside solution folders broken down by framework and language plus a single supporting project holding code used only to aid the demos that run.
 
 * ASP.NET MVC
-** CSharp
-** VisualBasic
-** FSharp - an FSharp libarry project with an associated C# web application containing only templates.
-** IronPython
+  * CSharp
+  * VisualBasic
+  * FSharp - an FSharp libarry project with an associated C# web application containing only templates.
+  * IronPython
 * ASP.NET WebForms
-** CSharp
+  * CSharp
 * Nancy
-** CSharp
+  * CSharp
 * Supporting Code
-** A couple of modules to assist in the demoing of code
+  * A couple of modules to assist in the demoing of code
 
 Each project, when run as a website, responds to the root page request by outputting hello world followed by some notes on how the code works.  These notes include clickable links that show you particular areas of the code (with lines highlighted as appropriate).
 
