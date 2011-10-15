@@ -20,6 +20,11 @@ Each project, when run as a website, responds to the root page request by output
 
 It is suggested that you start by looking at the C# MVC implementation and then work your way through the others noting the differences as you go.
 
+## Some notes on Mono
+This solution has been tested using MonoDevelop v2.8.1 with the Mono Framework 2.10.6 on MAC OSX Lion. The WebForms and Nancy examples work out of the box (primarily due to the independence of the Nancy codebase and the maturity of webforms).  To get the C# ASP.NET MVC project to work the System.Web.Helpers.dll, System.Web.Mvc.dll, System.Web.Razor.dll, System.Web.WebPages.Deployment.dll, System.Web.WebPages.dll and System.Web.WebPages.Razor.dll should be placed within the bin folder of the project (and the reference to System.Web.Mvc updated). These can be retrieved from the "\Program Files (x86)\Microsoft ASP.NET\ASP.NET MVC 3" and "\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\" folders of a windows machone with MVC installed.
+
+To run projects from mono right click on the project and choose 'Run With' -> 'Mono Soft Debugger for ASP.NET'.
+
 ## Resources
 * [The web platform installer](http://www.microsoft.com/web/downloads/platform.aspx)
 * DotNetDev uses [NuGet](http://nuget.org/) for [Nancy](https://github.com/NancyFx/Nancy)
